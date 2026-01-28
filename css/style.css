@@ -1,0 +1,80 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 0 40px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #8b949e;
+}
+
+/* About Section */
+#about {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+#about h2 {
+    color: #58a6ff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Topics Section */
+#topics {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+#topics h2 {
+    color: #58a6ff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#topics ul {
+    list-style: disc inside;
+    font-size: 1.1rem;
+}
+
+#topics li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #30363d;
+}
+
+footer a {
+    color: #58a6ff;
+    text-decoration: none;
+}
