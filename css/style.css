@@ -18,7 +18,7 @@ body {
 /* =========================
    NAVBAR
 ========================= */
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,103 +26,126 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #58a6ff;
 }
 
-.nav-links {
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-.nav-links li {
-    cursor: pointer;
+.navbar ul li a {
+    text-decoration: none;
+    color: #c9d1d9;
     font-size: 15px;
+    transition: color 0.3s;
 }
 
-.nav-links .contact-btn {
+.navbar ul li a:hover {
+    color: #58a6ff;
+}
+
+.nav-btn {
     background: #58a6ff;
     color: #0d1117;
     padding: 8px 18px;
     border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* =========================
    HERO SECTION
 ========================= */
-.hero {
+#hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 80px;
     min-height: 90vh;
-    position: relative;
 }
 
-/* LEFT SIDE */
-.hero-left {
+/* HERO TEXT */
+.hero-content {
     max-width: 520px;
 }
 
-.hero-left h1 {
+.hero-content h1 {
     font-size: 52px;
     margin-bottom: 10px;
 }
 
-.hero-left h1 span {
+.hero-content h1 span {
     color: #58a6ff;
 }
 
-.hero-left h2 {
-    font-size: 40px;
+.hero-content h2 {
+    font-size: 38px;
     color: #58a6ff;
     margin-bottom: 20px;
 }
 
-.hero-left p {
-    color: #8b949e;
+.hero-content p {
     font-size: 1.05rem;
+    color: #8b949e;
     margin-bottom: 35px;
 }
 
-/* BUTTONS */
+/* HERO BUTTONS */
 .hero-buttons {
     display: flex;
     gap: 20px;
 }
 
-.primary-btn {
-    background: #58a6ff;
-    color: #0d1117;
+.btn {
     padding: 12px 28px;
     border-radius: 30px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
     font-weight: bold;
+    transition: transform 0.3s ease;
 }
 
-.secondary-btn {
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.primary {
+    background: #58a6ff;
+    color: #0d1117;
+}
+
+.secondary {
     background: transparent;
     color: #c9d1d9;
-    padding: 12px 28px;
-    border-radius: 30px;
     border: 1px solid #58a6ff;
-    cursor: pointer;
 }
 
 /* =========================
-   HERO RIGHT – CARD IMAGE
+   HERO IMAGE (CREDIT CARD SIZE)
 ========================= */
-.hero-right {
+.hero-image {
     position: relative;
     margin-left: 60px;
     animation: float 6s ease-in-out infinite;
 }
 
+.hero-image img {
+    width: 160px;              /* credit-card size */
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
 /* Subtle cyber glow */
-.hero-circle {
+.circle {
     width: 200px;
     height: 200px;
     background: radial-gradient(circle, rgba(88,166,255,0.35), transparent);
@@ -132,19 +155,6 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-}
-
-/* Credit-card sized image */
-.hero-right img {
-    width: 160px;
-    border-radius: 12px;
-    z-index: 2;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.hero-right img:hover {
-    transform: scale(1.05);
 }
 
 /* Floating animation */
@@ -159,33 +169,21 @@ nav {
 ========================= */
 #about {
     padding: 100px 20px;
-}
-
-.about-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    background: rgba(24, 28, 33, 0.8);
-    padding: 40px;
-    border-radius: 16px;
+    text-align: center;
 }
 
-.profile-pic {
-    width: 140px;
-    border-radius: 50%;
-    border: 2px solid #58a6ff;
-}
-
-.about-text h2 {
+#about h2 {
     color: #58a6ff;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
-.about-text p {
+#about p {
     color: #c9d1d9;
     font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -243,16 +241,11 @@ footer {
     color: #8b949e;
 }
 
-footer a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-    .hero {
+    #hero {
         flex-direction: column;
         text-align: center;
         padding: 60px 20px;
@@ -262,12 +255,11 @@ footer a {
         justify-content: center;
     }
 
-    .hero-right {
-        margin-top: 40px;
-        margin-left: 0;
+    .hero-image {
+        margin: 40px 0 0 0;
     }
 
-    nav {
+    .navbar {
         padding: 20px;
     }
 }
